@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Versions](https://img.shields.io/pypi/pyversions/llmagent.svg)](https://pypi.org/project/llmagent/)
 [![LLMAgent Version](https://img.shields.io/pypi/v/llmagent.svg)](https://pypi.org/project/llmagent/)
+[![Downloads](https://pepy.tech/badge/llmagent)](https://pepy.tech/project/llmagent)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/knowusuboaky/LLMAgent/main.yml)](https://github.com/knowusuboaky/LLMAgent/actions)
 [![Issues](https://img.shields.io/github/issues/knowusuboaky/LLMAgent)](https://github.com/knowusuboaky/LLMAgent/issues)
 [![Contact](https://img.shields.io/badge/Email-Contact-blue.svg)](mailto:kwadwo.owusuboakye@outlook.com)
@@ -240,7 +241,7 @@ The **Reporting Team** consists of two agents: **Interpreter** and **Summarizer*
     ```
 
 2. **Summarizer Agent**
-    - The summarizer agent summarizes documents like PDFs or CSV files into concise, actionable insights.
+    - The summarizer agent summarizes documents like PDFs, PPT, DOCX, TXT files or Plain Text into concise, actionable insights.
     
     **Arguments**:
     - `llm`: The language model.
@@ -298,6 +299,10 @@ supervisor = supervisor_chain(
     completion_criteria="FINISH"
 )
 ```
+
+#### `Example of Supervision Workflow`
+
+<img src="https://github.com/knowusuboaky/RAGFlowChain/blob/main/README_files/figure-markdown/mermaid-figure-3.png?raw=true" width="2000" height="500" alt="Optional Alt Text">
 
 ## Dependencies
 
