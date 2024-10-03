@@ -3,7 +3,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Versions](https://img.shields.io/pypi/pyversions/llmagent.svg)](https://pypi.org/project/llmagent/)
 [![LLMAgent Version](https://img.shields.io/pypi/v/llmagent.svg)](https://pypi.org/project/llmagent/)
-[![Downloads](https://pepy.tech/badge/llmagent)](https://pepy.tech/project/llmagent)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/knowusuboaky/LLMAgent/main.yml)](https://github.com/knowusuboaky/LLMAgent/actions)
 [![Issues](https://img.shields.io/github/issues/knowusuboaky/LLMAgent)](https://github.com/knowusuboaky/LLMAgent/issues)
 [![Contact](https://img.shields.io/badge/Email-Contact-blue.svg)](mailto:kwadwo.owusuboakye@outlook.com)
