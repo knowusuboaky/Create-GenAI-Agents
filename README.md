@@ -32,6 +32,8 @@ To start using the **LLMAgent** library, you need to import the agents from thei
 
 ### Research Team Agents
 
+The **Research Team** consists of three agents: **Researcher**, **Coder**, and **Weather**. Each agent is designed to assist with gathering research, generating code, or fetching weather data.
+
 1. **Researcher Agent**
     - The researcher agent gathers and synthesizes information based on user queries. It automates the research process by providing structured and concise insights.
     
@@ -74,7 +76,31 @@ To start using the **LLMAgent** library, you need to import the agents from thei
     print(result['output'])
     ```
 
+3. **Weather Agent**
+    - The weather agent fetches and interprets weather data for a specified location using API integrations.
+    
+    **Arguments**:
+    - `llm`: The language model to be used.
+    - `OPENWEATHERMAP_API_KEY`: Your OpenWeatherMap API key.
+    - `messages`: A list of `HumanMessage` objects representing the weather query.
+
+    **Example**:
+    ```python
+    from LLMAgent.research_team.agents import weather
+    from langchain_openai import ChatOpenAI
+    from langchain_core.messages import HumanMessage
+
+    llm = ChatOpenAI()
+    weather_agent = weather(llm, OPENWEATHERMAP_API_KEY="your-api-key-here")
+
+    # Ask for weather details
+    result = weather_agent.invoke({"messages": [HumanMessage(content="What is the weather today in New York?")]})
+    print(result['output'])
+    ```
+
 ### Logic Team Agents
+
+The **Logic Team** consists of two agents: **Reasoner** and **Calculator**, both designed to solve logical and mathematical problems efficiently.
 
 1. **Reasoner Agent**
     - The reasoner agent handles logical reasoning tasks and provides clear, step-by-step explanations for complex problems.
@@ -118,31 +144,10 @@ To start using the **LLMAgent** library, you need to import the agents from thei
     print(result['output'])
     ```
 
-### Research Team Agents (Weather)
-
-1. **Weather Agent**
-    - The weather agent fetches and interprets weather data for a specified location using API integrations.
-    
-    **Arguments**:
-    - `llm`: The language model to be used.
-    - `OPENWEATHERMAP_API_KEY`: Your OpenWeatherMap API key.
-    - `messages`: A list of `HumanMessage` objects representing the weather query.
-
-    **Example**:
-    ```python
-    from LLMAgent.research_team.agents import weather
-    from langchain_openai import ChatOpenAI
-    from langchain_core.messages import HumanMessage
-
-    llm = ChatOpenAI()
-    weather_agent = weather(llm, OPENWEATHERMAP_API_KEY="your-api-key-here")
-
-    # Ask for weather details
-    result = weather_agent.invoke({"messages": [HumanMessage(content="What is the weather today in New York?")]})
-    print(result['output'])
-    ```
-
 ### Analysis Team Agents
+
+The **Analysis Team** consists of two agents: **Topic Generator** and **SQL Databaser**, both designed to provide insights from data, either through text clustering or SQL-based analysis.
+
 
 1. **Topic Generator Agent**
     - The topic generator agent clusters and analyzes text data, producing topics and visualizations based on user data.
@@ -213,8 +218,29 @@ To start using the **LLMAgent** library, you need to import the agents from thei
 
 ### Reporting Team Agents
 
-**Summarizer Agent**
-    - The summarizer agent summarizes documents like PDFs, PPT, DOC, TXT files and Text into concise, actionable insights.
+The **Reporting Team** consists of two agents: **Interpreter** and **Summarizer**, both designed to provide insights and summaries of outputs from various sources such as data, charts, or documents.
+
+1. **Interpreter Agent**
+    - The interpreter agent provides clear, insightful interpretations of various types of outputs, including visual plots, tables, and data.
+    
+    **Arguments**:
+    - `llm`: The language model.
+    - `code_output`: The result or output that needs to be interpreted.
+
+    **Example**:
+    ```python
+    from LLMAgent.reporting_team.agents import interpreter
+    from langchain_openai import ChatOpenAI
+
+    llm = ChatOpenAI()
+    interpreter_agent = interpreter(llm)
+
+    result = interpreter_agent.invoke({"code_output": "Bar chart showing sales data."})
+    print(result['output'])
+    ```
+
+2. **Summarizer Agent**
+    - The summarizer agent summarizes documents like PDFs or CSV files into concise, actionable insights.
     
     **Arguments**:
     - `llm`: The language model.
@@ -229,7 +255,7 @@ To start using the **LLMAgent** library, you need to import the agents from thei
     summarizer_agent = summarizer(llm)
 
     inputs = {
-    'input_data': '../Comments.csv'
+        'input_data': '../Comments.csv'
     }
 
     result = summarizer_agent.invoke(inputs)
@@ -240,9 +266,7 @@ To start using the **LLMAgent** library, you need to import the agents from thei
 
 The **Supervisor Chain** manages the workflow between multiple agents. It selects the next agent based on predefined criteria or completion conditions. This is useful when you want to automate multi-step tasks and route tasks to different agents based on the flow of the conversation or task requirements.
 
-### `supervisor_chain.py`
-
-The **Supervisor Chain** allows you to manage complex workflows by selecting different agents based on their capabilities or status.
+- The **Supervisor Chain** allows you to manage complex workflows by selecting different agents based on their capabilities or status.
 
 **Arguments**:
 - `subagent_names`: A list of subagents (workers) that will perform tasks.
