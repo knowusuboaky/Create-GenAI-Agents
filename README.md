@@ -55,6 +55,10 @@ The **Research Team** consists of three agents: **Researcher**, **Coder**, and *
     print(result['output'])
     ```
 
+#### `Example of Resarcher Workflow`
+
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-earch.png?raw=true" width="778" height="789" alt="Optional Alt Text"> 
+
 2. **Coder Agent**
     - The coder agent generates, debugs, and optimizes code based on user input. It handles various programming challenges, from basic functions to advanced tasks.
     
