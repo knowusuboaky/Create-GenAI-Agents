@@ -305,7 +305,7 @@ supervisor = supervisor_chain(
 
 #### `Example of Supervision Workflow`
 
-<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-4.png?raw=true" width="2000" height="500" alt="Optional Alt Text">
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-4.png?raw=true" width="802" height="481" alt="Optional Alt Text">
 
 ## Dependencies
 
