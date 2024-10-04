@@ -57,7 +57,7 @@ The **Research Team** consists of three agents: **Researcher**, **Coder**, and *
 
 #### `Example of Resarcher Workflow`
 
-<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-earch.png?raw=true" width="447" height="544" alt="Optional Alt Text"> 
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-earch.png?raw=true" width="778" height="789" alt="Optional Alt Text"> 
 
 2. **Coder Agent**
     - The coder agent generates, debugs, and optimizes code based on user input. It handles various programming challenges, from basic functions to advanced tasks.
@@ -106,6 +106,10 @@ The **Research Team** consists of three agents: **Researcher**, **Coder**, and *
     print(result['output'])
     ```
 
+#### `Example of Weather Workflow`
+
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-openwea.png?raw=true" width="757" height="792" alt="Optional Alt Text"> 
+
 ### Logic Team Agents
 
 The **Logic Team** consists of two agents: **Reasoner** and **Calculator**, both designed to solve logical and mathematical problems efficiently.
@@ -131,6 +135,10 @@ The **Logic Team** consists of two agents: **Reasoner** and **Calculator**, both
     print(result['output'])
     ```
 
+#### `Example of Reasoner Workflow`
+
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-rea.png?raw=true" width="408" height="548" alt="Optional Alt Text"> 
+
 2. **Calculator Agent**
     - The calculator agent solves mathematical queries and calculations based on natural language inputs.
     
@@ -151,6 +159,10 @@ The **Logic Team** consists of two agents: **Reasoner** and **Calculator**, both
     result = calculator_agent.invoke({"messages": [HumanMessage(content="Calculate the square root of 16")]})
     print(result['output'])
     ```
+
+#### `Example of Calculator Workflow`
+
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-cal.png?raw=true" width="410" height="549" alt="Optional Alt Text"> 
 
 ### Analysis Team Agents
 
@@ -185,6 +197,10 @@ The **Analysis Team** consists of two agents: **Topic Generator** and **SQL Data
     result['summary_df']  # View the summarized data
     result['fig'].show()  # Show the visualization
     ```
+
+#### `Example of Topic Generator Workflow`
+
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-topic.png?raw=true" width="335" height="730" alt="Optional Alt Text"> 
 
 2. **SQL Databaser Agent**
     - The SQL databaser agent executes SQL queries and provides insights from the results, including generating charts.
@@ -224,6 +240,10 @@ The **Analysis Team** consists of two agents: **Topic Generator** and **SQL Data
     repl.run(result['chart_plotly_code'])
     ```
 
+#### `Example of SQL Databaser Workflow`
+
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-sql.png?raw=true" width="502" height="870" alt="Optional Alt Text"> 
+
 ### Reporting Team Agents
 
 The **Reporting Team** consists of two agents: **Interpreter** and **Summarizer**, both designed to provide insights and summaries of outputs from various sources such as data, charts, or documents.
@@ -247,6 +267,10 @@ The **Reporting Team** consists of two agents: **Interpreter** and **Summarizer*
     print(result['output'])
     ```
 
+#### `Example of Interpreter Workflow`
+
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-inte.png?raw=true" width="403" height="546" alt="Optional Alt Text"> 
+
 2. **Summarizer Agent**
     - The summarizer agent summarizes documents like PDFs, PPT, DOCX, TXT files or Plain Text into concise, actionable insights.
     
@@ -269,6 +293,10 @@ The **Reporting Team** consists of two agents: **Interpreter** and **Summarizer*
     result = summarizer_agent.invoke(inputs)
     print(result['summary'])
     ```
+
+#### `Example of Summarizer Workflow`
+
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-sum.png?raw=true" width="358" height="535" alt="Optional Alt Text"> 
 
 ### Supervisor Chain
 
