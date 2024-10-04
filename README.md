@@ -80,6 +80,10 @@ The **Research Team** consists of three agents: **Researcher**, **Coder**, and *
     print(result['output'])
     ```
 
+#### `Example of Resarcher Workflow`
+
+<img src="https://github.com/knowusuboaky/LLMAgent/blob/main/README_files/figure-markdown/mermaid-figure-coder.png?raw=true" width="447" height="544" alt="Optional Alt Text"> 
+
 3. **Weather Agent**
     - The weather agent fetches and interprets weather data for a specified location using API integrations.
     
