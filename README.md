@@ -1,4 +1,4 @@
-# LangAgent 0.1.0
+# LangAgent 0.2.0
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Versions](https://img.shields.io/pypi/pyversions/langagent.svg)](https://pypi.org/project/langagent/)
